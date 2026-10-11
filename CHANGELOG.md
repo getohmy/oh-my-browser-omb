@@ -1,13 +1,13 @@
 # 版本记录 · Release notes
 
-## 0.6.11 — 2026-10-11 · 已准备，待部署 / Prepared, deployment pending
+## 0.6.11 — 2026-10-11 · 服务端已部署 / Server deployment verified
 
 - 搜索失败按证据区分用户环境、OMB 与尚无法判断的原因，避免把导航超时笼统归因于网络。
 - 保留受限的阶段日志和请求链路，便于开发者排查；Agent 获得责任范围、恢复建议与请求 ID。
 - 更新使用指南；兼容已有版本，不提高最低版本，不改变升级提醒策略。
-- 部署后需更新 CLI 并刷新 Full 扩展。Lite 商店审核与发布独立进行，此记录不表示已上线。
+- 已验收 API、CLI、MCP 执行版本及 Full 扩展 0.6.11，页面读取、Google/Bing 搜索和请求链路日志通过；当前 MCP 自动加载新版 CLI，无需重启。Lite 商店审核与发布独立进行。
 
-This compatible patch classifies search failures by evidence, preserves bounded stage diagnostics and request lineage, and improves agent recovery guidance. Announcement and minimum-version policies are unchanged. Update the CLI and refresh Full after deployment; Lite store publication is separate. Production acceptance remains pending.
+This compatible patch classifies search failures by evidence, preserves bounded stage diagnostics and request lineage, and improves agent recovery guidance. Announcement and minimum-version policies are unchanged. Update the CLI and refresh Full after deployment; Lite store publication is separate. Production smoke checks verified API, CLI, live MCP execution and Full 0.6.11, including page reading, Google/Bing searches and request-stage logs. The existing MCP bridge loaded the new runtime without restarting Codex. A search overlapping extension refresh returned an unknown outcome and was recorded separately; post-refresh searches succeeded. Fault-injection coverage comes from local regression tests. Lite store publication remains separate.
 
 ## 0.6.10 — 2026-10-11 · 已准备，待部署 / Prepared, deployment pending
 
