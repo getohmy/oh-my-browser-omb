@@ -1,5 +1,14 @@
 # 版本记录 · Release notes
 
+## 0.6.11 — 2026-10-11 · 已准备，待部署 / Prepared, deployment pending
+
+- 搜索失败按证据区分用户环境、OMB 与尚无法判断的原因，避免把导航超时笼统归因于网络。
+- 保留受限的阶段日志和请求链路，便于开发者排查；Agent 获得责任范围、恢复建议与请求 ID。
+- 更新使用指南；兼容已有版本，不提高最低版本，不改变升级提醒策略。
+- 部署后需更新 CLI 并刷新 Full 扩展。Lite 商店审核与发布独立进行，此记录不表示已上线。
+
+This compatible patch classifies search failures by evidence, preserves bounded stage diagnostics and request lineage, and improves agent recovery guidance. Announcement and minimum-version policies are unchanged. Update the CLI and refresh Full after deployment; Lite store publication is separate. Production acceptance remains pending.
+
 ## 0.6.10 — 2026-10-11 · 已准备，待部署 / Prepared, deployment pending
 
 - 修正 CLI doctor 的版本比较：已安装版本比升级提醒版本更新时，不再误报为过期。
